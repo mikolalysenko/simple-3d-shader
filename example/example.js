@@ -7,7 +7,7 @@ var shader, mesh
 
 shell.on("gl-init", function() {
   shader = simple3DShader(shell.gl)
-  mesh = createMesh(gl, require("bunny"))
+  mesh = createMesh(shell.gl, require("bunny"))
 })
 
 shell.on("gl-render", function(t) {
@@ -15,9 +15,10 @@ shell.on("gl-render", function(t) {
   shader.bind()
   
   //Set camera parameters
-  shader.uniforms.projection = glm.mat4.projection()
-  shader.uniforms.view = glm.mat4.lookAt()
-  shader.unifomrs.model = glm.mat4.identity()
+  var scratch = new Float32Array(16)
+  shader.uniforms.projection = glm.mat4.perspective(scratch, 45, shell.width/shell.height, 0.1, 1000.0)
+  shader.uniforms.view = glm.mat4.lookAt(scratch, [0, 0, -10], [0,0,0], [0,1,0])
+  shader.uniforms.model = glm.mat4.identity(scratch)
   
   //Draw object
   mesh.bind(shader)
