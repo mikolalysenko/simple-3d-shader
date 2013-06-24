@@ -2,9 +2,9 @@ simple-3d-shader
 ================
 A simple 3d shader for WebGL
 
-**WORK IN PROGRESS**
-
 ## Example
+
+[Try it in your browser](http://mikolalysenko.github.io/simple-3d-shader/)
 
 ```javascript
 var shell = require("gl-now")()
@@ -30,12 +30,18 @@ shell.on("gl-render", function(t) {
   glm.mat4.identity(A)
   shader.uniforms.model = glm.mat4.rotateY(B, A, 0.001 * Date.now())
   
+  //Set color
+  shader.attributes.color = [1, 0.7, 0.3]
+  
   //Draw object
   mesh.bind(shader)
   mesh.draw()
   mesh.unbind()
 })
 ```
+
+Here is what it shoudl look like assuming everything worked
+
 
 ## Install
 
