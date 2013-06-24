@@ -40,9 +40,9 @@ shell.on("gl-render", function(t) {
 })
 ```
 
-Here is what it shoudl look like assuming everything worked:
+Here is what it should look like assuming everything worked:
 
-<img src="images/screenshot.png">
+<img src="https://raw.github.com/mikolalysenko/simple-3d-shader/master/images/screenshot.png">
 
 
 ## Install
