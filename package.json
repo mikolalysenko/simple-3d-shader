@@ -1,0 +1,38 @@
+{
+  "name": "simple-3d-shader",
+  "version": "0.0.0",
+  "description": "A simple 3d shader for webgl",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "gl-shader": "~0.0.4"
+  },
+  "devDependencies": {
+    "bunny": "~1.0.0",
+    "gl-matrix": "~2.0.0",
+    "gl-mesh": "~0.0.0",
+    "gl-now": "~0.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/simple-3d-shader.git"
+  },
+  "keywords": [
+    "simple",
+    "3d",
+    "shader",
+    "webgl"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "58b5968a4ce099831d0b52783b9cf311e95512a0",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/simple-3d-shader/issues"
+  }
+}
