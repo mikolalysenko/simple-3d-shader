@@ -21,6 +21,8 @@ shell.on("gl-render", function(t) {
   glm.mat4.identity(A)
   shader.uniforms.model = glm.mat4.rotateY(B, A, 0.001 * Date.now())
   
+  shader.attributes.color = [1, 0.7, 0.3]
+  
   //Draw object
   mesh.bind(shader)
   mesh.draw()
